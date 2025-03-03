@@ -1,0 +1,47 @@
+/* Body Background */
+body {
+   background-color: #F2F2F0;
+   color: black;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+   background-color: #4682B4;;
+   color: white;
+   text-align: center;
+}
+
+figure img {
+   width: 200px; 
+   height: 300px;
+   text-align: center;
+}
+
+figcaption {
+   font-style: italic;
+}
+
+/* Experience Section */
+.cs-experience {
+   background-color: #ADD8E6; /* Light gray background */
+   padding: 15px;
+}
+
+ul {
+   padding: 10px;
+   background-color: #E0E0E0; 
+}
+
+/* Career Goals Section */
+.career-goals {
+   background-color: #ADD8E6; /* Light Blue */
+   padding: 15px;
+}
+
+.learn-things {
+   background-color: #ADD8E6; /* Light Blue */
+   padding: 15px;
+}
+h2 {
+   color: #2E8B57;
+}
