@@ -1,0 +1,151 @@
+ body {
+    background-color: #EAEAEA;
+    background: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ header {
+    background-color: #002171;
+    color: #FFFFFF;
+    text-align: center;
+ }
+
+ header a {
+  text-decoration: none; /* No underline */
+}
+
+header a:link, header a:visited {
+  color: #FFFFFF; /* White text color */
+}
+
+header a:hover {
+  color: #90C7E3; /* Light blue text color */
+}
+
+ nav {
+    font-weight: bold;
+    padding: 0;
+    font-size: 120%;
+    text-align: center;
+ }
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+    list-style: none;
+}
+
+nav li {
+    border: bottom solid 1px darkblue;
+}
+nav a:link{
+    color: #5C7FA3;
+}
+
+nav a:visited{
+    color:#344873;
+}
+
+nav a:hover{
+    color: #A52A2A;
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 0;
+    font-size: 3em;
+    letter-spacing: 0.25em;
+}
+
+ h2 {
+    color: #1976D2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 0 #CCCCCC;
+ }
+
+ h3 {
+    color:#000033;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+ }
+
+ main ul {
+    list-style-image: url("images/marker.gif");
+ }
+
+ dt {
+    color: #002171;
+ }
+
+ .resort {
+    color: #1976D2;
+    font-weight: bold;
+ }
+
+ #contact {
+    font-size: 90%;
+ }
+
+ footer {
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 2em;
+    margin-left: 190px;
+    background-color: #FFFFFF;
+ }
+
+ #wrapper {
+    background-color: #90C7E3;
+    background: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+ }
+
+ #main-selector {
+    background-color: #FFFFFF;
+    margin-left: 190px;
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    display: block;
+    overflow: auto;
+ }
+
+ #homehero {
+  height: 300px;
+  margin-left: 190px;
+  background-image: url('./images/coast2.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+#yurthero {
+    height: 300px;
+    margin-left: 190px;
+    background-image: url('./images/yurt.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#trailhero {
+    height: 300px;
+    margin-left: 190px;
+    background-image: url('./images/trail.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+* { box-sizing: border-box; }
+
+section {
+  width: 33%;
+  padding-left: 2em;
+  padding-right: 2em;
+}
