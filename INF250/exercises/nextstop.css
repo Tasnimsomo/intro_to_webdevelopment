@@ -5,23 +5,26 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box; /* Ensure padding and borders don't affect layout */
 }
 
-header, nav, main, footer {
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 15px;
-    margin-bottom: 20px;
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Slight background for readability */
+    border-radius: 10px;
 }
 
+/* Navigation styles */
 nav ul {
     list-style: none;
     display: flex;
-    padding: 0;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 nav li {
@@ -29,11 +32,66 @@ nav li {
     margin: 5px;
 }
 
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:link {
+    color: #5C7FA3; /* Medium blue text */
+}
+
+nav a:visited {
+    color: #344873; /* Dark blue text */
+}
+
+nav a:hover {
+    color: #A52A2A; /* Dark red text */
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Optional, you can set a max width */
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+main h2, main h3 {
+    text-align: center; /* Center-align headings */
+    margin-bottom: 15px; /* Add spacing after headings */
+    font-size: 2rem; /* Adjust heading size */
+    color: #344873; /* Dark blue for better contrast */
+}
+
+main p {
+    line-height: 1.6; /* Improves readability */
+    font-size: 1rem; /* Adjust font size */
+    color: #333; /* Dark color for better contrast */
+    margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+/* Specific alignment for articles */
+article {
+    margin-bottom: 40px;
+}
+
+article h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+article ul {
+    margin: 10px 0 20px 20px; /* Indentation for lists */
+    list-style-type: disc;
+}
+
 /* Flexbox for Gallery */
 #gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 20px 0;
 }
 
 #gallery figure {
@@ -51,35 +109,100 @@ figure img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Title Styles */
 h2 {
     border: 2px solid black;
     border-radius: 10%;
     padding: 10px;
     max-width: 50%;
     text-align: center;
+    margin: 0 auto;
 }
 
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+/* Footer styles */
 footer {
     text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    color: #333;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    #gallery figure {
-        flex-basis: calc(50% - 30px);
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    nav li {
+        border-bottom: none;
     }
 }
 
-@media (max-width: 480px) {
-    #gallery figure {
-        flex-basis: 100%;
+@media (min-width: 1024px) {
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        border: 1px solid #002171;
+        box-shadow: 3px 3px 3px #002171;
     }
-    
-    h2 {
-        max-width: 90%;
+
+    nav {
+        text-align: left;
+        padding-left: 1em;
+    }
+
+    /* Grid layout */
+    @supports (display: grid) {
+        nav ul {
+            flex-direction: column;
+            padding-top: 1em;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template:
+                "header header"
+                "nav    hero"
+                "nav    main"
+                "nav    footer"
+                / 180px 1fr; 
+        }
+
+        /* Flexible grid for content */
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive gallery grid */
+            gap: 15px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: rgba(255, 255, 255, 0.7); /* Ensures readability */
+            padding: 20px;
+        }
+
+        nav {
+            grid-area: nav;
+            padding: 20px;
+        }
+
+        main {
+            grid-area: main;
+            padding: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+        }
     }
 }
+

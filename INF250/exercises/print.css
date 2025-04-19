@@ -1,7 +1,51 @@
- img {
+/* Remove images for print */
+img {
     display: none;
- }
+}
 
- body {
-    background-color: #f8f8f8;
- }
+/* Set background color to off-white and adjust text color */
+body {
+    background-color: #f8f8f8; /* Off-white background */
+    color: #000000; /* Black text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure header text is black */
+header {
+    text-align: center;
+    color: #000000; /* Black text color */
+    margin-bottom: 10px;
+}
+
+/* Adjust container for single-column layout in print */
+.container {
+    display: block; /* Change from flex to block */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Ensure h2 and p text is black */
+h2 {
+    color: #000000; /* Black text color */
+}
+
+p {
+    color: #000000; /* Black text color */
+}
+
+/* Remove borders and extra spacing from columns */
+.column {
+    border: none;
+    padding: 10px 0;
+    min-height: auto; /* Prevent extra space allocation */
+}
+
+/* Remove any extra padding or margin that may create an empty box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

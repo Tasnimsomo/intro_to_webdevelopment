@@ -18,8 +18,13 @@ body {
 
 header {
     text-align: center;
+    color: #8A4FFF;
+}
+h2 {
+  color: #3A7D44;
+  margin-bottom: 10px;
 }
 
 p {
-    color: rgb(109, 109, 202);
+    color: #2D4B6E;
 }
